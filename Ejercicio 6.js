@@ -2,19 +2,24 @@
 comienzan con “P” de una cadena de caracteres.*/
 
 // Una prueba de como podria ser.
-let unTexto = "Vamos a ver si ahora el programa funcion bien por las dudasp";
-let i = 0;
-let palabras = 0;
-let caracteres = 0;
-while(i < unTexto.length){
-    while(unTexto[i] == " "){
-        i++;
+function contarLetraP(texto){
+  let i = 0;
+  let palabrasConP = 0;
+  let palabras;
+  while(texto[i] != "."){
+    while (texto[i] == " "){
+      i++;
     }
-    while(unTexto[i-1] == " "){
-        if(unTexto[i] == "p" || unTexto[i] == "P"){
-           palabras++;}
-        i++;
+    palabras = "";
+    while(texto[i]!=" " && texto[i]!="."){
+      palabras = palabras+texto[i];
+      i++;
     }
-    i++;
+    if (palabras.length > 0 && palabras[0]=="p" || palabras[0]=="P"){
+      palabrasConP++;
+    }
+  }
+  return palabrasConP;
 }
-console.log(palabras);
+
+console.log(contarLetraP("Comiendo papas estaba el papa amigo de mi Papa."));
