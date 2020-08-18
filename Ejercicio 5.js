@@ -38,12 +38,13 @@ function texto(texto) {
 console.log(texto("Hola como andas todo bien chamigo"));
 
 // hecho por gustavo, funca re bien
-var fort = "San martin era un tipo re groso.";
+
+function cuantosTienenTres(fort) {
 var i = 0
 var palabras = 0
 var palabrasLargas = 0
 while(fort[i] != "."){
-    while(fort[i] == " "){ i++};
+    while(fort[i] == " "){ i++;}
     palabras = "";
     while(fort[i] != " " && fort[i] != "."){
         palabras = palabras + fort[i];
@@ -52,6 +53,7 @@ while(fort[i] != "."){
     if(palabras.length > 3){
         palabrasLargas++;
     }
+} return palabrasLargas;
 }
 
-console.log("Las palabras que contienen mas de 3 caracteres son en total: " + palabrasLargas);
+
