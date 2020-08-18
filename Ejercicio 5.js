@@ -19,11 +19,11 @@ function texto(texto) {
   let palabras = 0;
   let i = 0;
   let caracteres = 0;
-  while (i < texto.length) {
+  while (i < texto.length) { // si le agrego el texto[i] != "." funca
     while(texto[i] == " ") {
       i++;
     }
-    while(texto[i] != " " && i < texto.length) {
+    while(texto[i] != " " && i < texto.length) { // si le agrego el texto[i] != "." funca
       i++;
       caracteres++;
     }
